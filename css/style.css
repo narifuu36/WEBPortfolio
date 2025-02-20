@@ -5,7 +5,7 @@ body {
   font-family: "Noto Serif", serif;
   background-color: #fff;
   color: #fff;
-	font-size: 18px;
+  font-size: 18px;
 }
 nav {
   text-align: center;
@@ -22,7 +22,6 @@ nav li {
   display: inline-block;
   float: left;
   text-align: center;
-	
 }
 nav li:not(:last-child) {
   border-right: 2px solid #ddd;
@@ -149,37 +148,38 @@ nav a:hover {
   margin-top: 50px;
 }
 .career-section h3 {
+  display: flex;
+  justify-content: center;
   font-size: 36px;
-  color: #fff;
-  font-weight: bold;
-  margin: 50px 80px 0;
+  margin: 25px 0;
 }
 .career-section p {
-  width: 40%;
-  font-size: 20px;
-  line-height: 1.6;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
   margin: 25px 100px 25px;
 }
-.values-section h2 {
-  position: absolute;
-  font-size: 36px;
-  color: #fff;
-  font-weight: bold;
-  margin: 7% 50%;
+.values-section h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 34px;
+  margin: 25px 0;
 }
 .values-section p {
-  width: 40%;
-  font-size: 20px;
-  line-height: 1.6;
-  color: #fff;
-  margin: 15% 53%;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 25px 100px 25px;
 }
 .hobby-section h2 {
+  display: flex;
+  justify-content: center;
   font-size: 36px;
-  color: #fff;
-  font-weight: bold;
-  margin: 50px 80px 0;
+  margin: 25px 0;
 }
 .pc {
   display: flex;
@@ -189,9 +189,10 @@ nav a:hover {
 }
 .pc h3 {
   width: 30%;
-  font-size: 36px;
+  font-size: 24px;
   color: #fff;
   font-weight: bold;
+  text-align: center;
   /*margin: 50px 50px 25px;*/
 }
 .pc figure {
@@ -213,10 +214,11 @@ nav a:hover {
   justify-content: space-between;
 }
 .music h3 {
-  font-size: 36px;
+  font-size: 24px;
   color: #fff;
   font-weight: bold;
-  margin: 50px 50px 25px;
+  text-align: center;
+  /*margin: 50px 50px 25px;*/
 }
 .music p {
   width: 20%;
@@ -227,10 +229,11 @@ nav a:hover {
   justify-content: space-between;
 }
 .wvideo h3 {
-  font-size: 36px;
+  font-size: 24px;
   color: #fff;
   font-weight: bold;
-  margin: 50px 50px 25px;
+  text-align: center;
+  /*margin: 50px 50px 25px;*/
 }
 .wvideo p {
   width: 20%;
@@ -274,11 +277,8 @@ nav a:hover {
   position: relative;
   background: rgb(72 64 64 / .5);
   margin-bottom: 50px;
-	padding: 25px 0;
+  padding: 25px 0;
 }
-
-
-
 .project-section h2 {
   font-size: 36px;
   color: #fff;
@@ -290,6 +290,7 @@ nav a:hover {
 .project-section h3 {
   display: flex;
   justify-content: center;
+  text-align: center;
   font-size: 24px;
   margin: 25px 0;
 }
@@ -297,20 +298,18 @@ nav a:hover {
   display: flex;
   justify-content: center;
   font-size: 16px;
-	line-height: 1.7;
-	text-align: center;
-	margin: 25px 100px 25px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 25px 100px 25px;
 }
-
 .box4 {
   max-width: 80%;
   margin: 0 auto;
   position: relative;
   background: rgb(72 64 64 / .5);
   margin-bottom: 50px;
-	padding: 25px 0;
+  padding: 25px 0;
 }
-
 .skills-section h2 {
   font-size: 36px;
   color: #fff;
@@ -329,9 +328,9 @@ nav a:hover {
   display: flex;
   justify-content: center;
   font-size: 16px;
-	line-height: 1.7;
-	text-align: center;
-	margin: 25px 100px 25px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 25px 100px 25px;
 }
 .box5 {
   max-width: 80%;
@@ -339,9 +338,8 @@ nav a:hover {
   position: relative;
   background: rgb(72 64 64 / .5);
   margin-bottom: 50px;
-	padding: 25px 0;
+  padding: 25px 0;
 }
-
 .contact-section h2 {
   font-size: 36px;
   color: #fff;
@@ -360,21 +358,16 @@ nav a:hover {
   display: flex;
   justify-content: center;
   font-size: 16px;
-	line-height: 1.7;
-	text-align: center;
-	margin: 25px 100px 25px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 25px 100px 25px;
 }
-
-
-footer{
-	text-align: center;
-	font-size: 0.75em;
-	background: #424242;
-	padding: 2em;
+footer {
+  text-align: center;
+  font-size: 0.75em;
+  background: #424242;
+  padding: 2em;
 }
-
 footer small {
-	display: block;
+  display: block;
 }
-
-
