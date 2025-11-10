@@ -122,11 +122,6 @@ nav a:hover {
   height: 100%;
 }
 
-
-
-
-
-
 .box {
   max-width: 80%;
   margin: 0 auto;
@@ -156,9 +151,9 @@ nav a:hover {
   max-width: 80%;
   margin: 0 auto;
   position: relative;
-  display: flex;
   background: rgb(72 64 64 / .5);
   margin-bottom: 50px;
+  padding: 25px 0;
 }
 .career-section h2 {
   font-size: 36px;
@@ -186,12 +181,12 @@ nav a:hover {
 }
 
 .box1 {
-   max-width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   position: relative;
-  display: flex;
   background: rgb(72 64 64 / .5);
   margin-bottom: 50px;
+  padding: 25px 0;
 }
 .values-section h3 {
   display: flex;
