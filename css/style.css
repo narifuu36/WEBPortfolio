@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
+
 body {
   margin: 0;
   font-family: "Noto Serif", serif;
@@ -7,6 +8,8 @@ body {
   color: #fff;
   font-size: 18px;
 }
+
+/* ナビ */
 nav {
   text-align: center;
   background: #424242;
@@ -20,7 +23,7 @@ nav ul {
 nav li {
   list-style: none;
   display: inline-block;
-  float: left;
+  float: none;
   text-align: center;
 }
 nav li:not(:last-child) {
@@ -41,55 +44,8 @@ nav a:hover {
   color: #F7CB4D;
   border-bottom: 2px solid #F7CB4D;
 }
-/*ボタン*/
-.btn-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-.btn {
-  position: relative;
-  display: block;
-  width: 130px;
-  height: 16px;
-  line-height: 10px;
-  font-size: 20px;
-  text-decoration: none;
-  background-color: #320710;
-  border: 2px solid #320710;
-  color: #f15a4a;
-  text-align: center;
-  z-index: 2;
-  overflow: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-.btn:hover {
-  color: #fff;
-}
-.btn::after, .btn::before {
-  position: absolute;
-  z-index: -1;
-  display: block;
-  content: "";
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-.btn:hover::after {
-  top: 0;
-  left: 0;
-  background-color: #f15a4a;
-}
-.btn::after {
-  top: 0;
-  left: -200px;
-  width: 100%;
-  height: 100%;
-}
-/*ボタン*/
+
+/* 中央コンテンツ */
 .content {
   text-align: center;
   margin: 50px 0;
@@ -98,6 +54,11 @@ nav a:hover {
   font-size: 100px;
   padding-top: 50px;
 }
+.content p {
+  font-size: 20px;
+}
+
+/* 背景動画 */
 .background-video {
   position: fixed;
   top: 0;
@@ -111,51 +72,24 @@ nav a:hover {
   min-width: 100%;
   min-height: 100%;
 }
-.content p {
-  font-size: 20px;
-}
-.background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
+/* 汎用ボックス */
 .box {
   max-width: 80%;
   margin: 0 auto;
   position: relative;
-  display: flex;
   background: rgb(72 64 64 / .5);
   margin-bottom: 50px;
 }
-.introduction-section h2 {
-  font-size: 36px;
-  color: #fff;
-  font-weight: bold;
+.box.flex {
   display: flex;
-  justify-content: center;
-  margin-top: 50px;
 }
-.introduction-section p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  margin: 25px 100px 25px;
-  text-align: center;
-}
-.box0 {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-  background: rgb(72 64 64 / .5);
-  margin-bottom: 50px;
+.box.padded {
   padding: 25px 0;
 }
-.career-section h2 {
+
+/* 見出し共通スタイル */
+.section-title {
   font-size: 36px;
   color: #fff;
   font-weight: bold;
@@ -163,16 +97,23 @@ nav a:hover {
   justify-content: center;
   margin-top: 50px;
 }
-.career-section h3 {
+.section-subtitle {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 36px;
+  font-size: 24px;
   margin: 25px 0;
 }
-.career-section p {
+
+/* セクション本文共通 */
+.introduction-section p,
+.career-section p,
+.values-section p,
+.project-section p,
+.skills-section p,
+.contact-section p {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -180,42 +121,7 @@ nav a:hover {
   text-align: center;
 }
 
-.box1 {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-  background: rgb(72 64 64 / .5);
-  margin-bottom: 50px;
-  padding: 25px 0;
-}
-.values-section h3 {
-  display: flex;
-  justify-content: center;
-  font-size: 36px;
-  margin: 25px 0;
-}
-.values-section p {
-  display: flex;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 1.7;
-  text-align: center;
-  margin: 25px 100px 25px;
-}
-.box2 {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  background: rgb(72 64 64 / .5);
-  margin-bottom: 50px;
-}
-.hobby-section h2 {
-  display: flex;
-  justify-content: center;
-  font-size: 36px;
-  margin: 25px 0;
-}
+/* hobby レイアウト */
 .pc {
   display: flex;
   justify-content: space-around;
@@ -228,140 +134,116 @@ nav a:hover {
   color: #fff;
   font-weight: bold;
   text-align: center;
-  /*margin: 50px 50px 25px;*/
 }
 .pc figure {
   width: 25%;
 }
 .pc figure img {
   max-width: 100%;
+  height: auto;
 }
 .pc p {
   width: 30%;
   line-height: 1.7;
-  /*margin: 25px 20px 25px;*/
 }
-.music {
-  display: flex;
-  justify-content: space-between;
+
+/* skills */
+.output {
+  display: flex;              
+  flex-direction: row;
+  gap: 1rem;                  
+  overflow-x: auto;           
+  padding: 0.5rem 0;
+  -webkit-overflow-scrolling: touch;
 }
-.music h3 {
-  font-size: 24px;
+
+.output::-webkit-scrollbar {
+  height: 8px;
+}
+.output::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+}
+
+.output .element {
+  flex: 0 0 280px;
+  box-sizing: border-box;
+  background: rgb(255 255 255 / 0.04);
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 160px;
   color: #fff;
-  font-weight: bold;
-  text-align: center;
-  /*margin: 50px 50px 25px;*/
-}
-.music p {
-  width: 20%;
-  margin: 25px 20px 25px;
-}
-.wvideo {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
-.wvideo h3 {
-  font-size: 24px;
+
+.output .element img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.output .element p {
+  display: block;             
+  margin: 0.25rem 0 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* skills：box 内の中央配置を優先し、小さくなったら横スクロールに切り替える */
+.skills-section .output {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;            /* 横並びを崩さずスクロールさせる */
+  gap: 1rem;
+  overflow-x: auto;            /* 小さくなったら横スクロール */
+  padding: 0.75rem 1rem;       /* 左右のガターを確保 */
+  -webkit-overflow-scrolling: touch;
+  justify-content: center;     /* コンテナ内で要素群を中央配置 */
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;              /* box 内の中央に寄せる */
+  box-sizing: border-box;
+}
+
+/* スクロールバー見た目 */
+.skills-section .output::-webkit-scrollbar {
+  height: 8px;
+}
+.skills-section .output::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+}
+
+/* 各カード（要素） */
+.skills-section .output .element {
+  flex: 0 0 280px;             /* 固定幅カード */
+  box-sizing: border-box;
+  background: rgb(255 255 255 / 0.04);
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 160px;
   color: #fff;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* カード内の画像／テキスト */
+.skills-section .output .element img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.skills-section .output .element p {
+  margin: 0.25rem 0 0;
   text-align: center;
-  /*margin: 50px 50px 25px;*/
+  line-height: 1.4;
 }
-.wvideo p {
-  width: 20%;
-  margin: 25px 20px 25px;
-}
-.box3 {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-  background: rgb(72 64 64 / .5);
-  margin-bottom: 50px;
-  padding: 25px 0;
-}
-.project-section h2 {
-  font-size: 36px;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.project-section h3 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 24px;
-  margin: 25px 0;
-}
-.project-section p {
-  display: flex;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 1.7;
-  text-align: center;
-  margin: 25px 100px 25px;
-}
-.box4 {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-  background: rgb(72 64 64 / .5);
-  margin-bottom: 50px;
-  padding: 25px 0;
-}
-.skills-section h2 {
-  font-size: 36px;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.skills-section h3 {
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
-  margin: 25px 0;
-}
-.skills-section p {
-  display: flex;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 1.7;
-  text-align: center;
-  margin: 25px 100px 25px;
-}
-.box5 {
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-  background: rgb(72 64 64 / .5);
-  margin-bottom: 50px;
-  padding: 25px 0;
-}
-.contact-section h2 {
-  font-size: 36px;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.contact-section h3 {
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
-  margin: 25px 0;
-}
-.contact-section p {
-  display: flex;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 1.7;
-  text-align: center;
-  margin: 25px 100px 25px;
-}
+
+/* footer */
 footer {
   text-align: center;
   font-size: 0.75em;
