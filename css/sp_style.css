@@ -163,4 +163,9 @@
     scroll-snap-align: start; /* 要素の開始位置でスナップ */
     margin-right: 0.5rem; /* カード間の隙間 */
   }
+  
+  /* Java と Python は常に中央揃え */
+  .skills-section .output.centered-output {
+    justify-content: center; /* モバイルでも中央揃え */
+  }
 }
