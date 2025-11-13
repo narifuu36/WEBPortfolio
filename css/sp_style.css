@@ -145,4 +145,22 @@
     text-align: center;
     margin-bottom: 2em;
   }
+  /* Skills セクション：モバイルで先頭を左端から始め、両端が切れないようにする */
+  .box {
+    max-width: 100%; /* viewport 幅をフルに使う */
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  .skills-section .output {
+    padding: 0.75rem 1rem; /* 左右の余白を確保 */
+    justify-content: flex-start; /* 先頭を左寄せにする */
+    scroll-snap-type: x mandatory; /* スクロールスナップで切れを防ぐ */
+    -webkit-overflow-scrolling: touch;
+  }
+  .skills-section .output .element {
+    scroll-snap-align: start; /* 要素の開始位置でスナップ */
+    margin-right: 0.5rem; /* カード間の隙間 */
+  }
 }

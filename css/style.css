@@ -106,6 +106,10 @@ nav a:hover {
 }
 
 /* セクション本文共通 */
+.introduction-section {
+  padding: 2rem 1rem; /* 上下の余白を追加 */
+  box-sizing: border-box;
+}
 .introduction-section p,
 .career-section p,
 .values-section p,
@@ -119,6 +123,24 @@ nav a:hover {
   justify-content: center;
   margin: 25px 100px 25px;
   text-align: center;
+}
+
+/* Project セクション：テキストを読みやすくするため左右余白と行間を拡大 */
+.project-section p {
+  margin: 25px 50px 25px;
+  line-height: 2; /* 行間を広げる（1.7 → 2） */
+  padding: 0 2rem; /* 左右に2文字分の余白（パディング）を追加 */
+}
+
+/* Project セクション内の画像：テキストとの互換性を保つサイズに調整 */
+.project-section img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* hobby レイアウト */
