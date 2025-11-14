@@ -80,16 +80,23 @@
     <div class="values-section">
       <h3 class="section-title">Values</h3>
       <p>
-        私が大切にしている価値観は、誠実さ、成長、そして探求心です。<br>
-        <br>
-        誠実 : どんな仕事においても信頼を築くための基本。誠実な対応を心がけ、常に信頼関係を大切にしています。<br>
-        <br>
-        成長 : 新しいことに挑戦し、自己成長を促し続けることが、より良い成果を生む鍵だと思っています。<br>
-        <br>
-        探求心 : 限られたリソースの中で最適な解決策を見つけるために欠かせません。柔軟な発想で、革新的なアイデアを提供することを大切にしています。<br>
-        <br>
-        これらの価値観を基に、今後も常に進化し続けたいと考えています。
+        私が大切にしている価値観は、誠実さ、成長、そして探求心です。
       </p>
+      <div class="expandable-container">
+        <div class="expandable-content" id="values-expand">
+          <p>
+            <br>
+            誠実 : どんな仕事においても信頼を築くための基本。誠実な対応を心がけ、常に信頼関係を大切にしています。<br>
+            <br>
+            成長 : 新しいことに挑戦し、自己成長を促し続けることが、より良い成果を生む鍵だと思っています。<br>
+            <br>
+            探求心 : 限られたリソースの中で最適な解決策を見つけるために欠かせません。柔軟な発想で、革新的なアイデアを提供することを大切にしています。<br>
+            <br>
+            これらの価値観を基に、今後も常に進化し続けたいと考えています。
+          </p>
+        </div>
+        <button class="expand-toggle collapsed" data-target="values-expand">もっと見る</button>
+      </div>
     </div>
   </div>
   <!-- ===== HOBBY SECTION ===== -->
@@ -122,31 +129,45 @@
         <p>【AWSを活用した空席可視化システム「見える化くん」】</p>
 
         <h3 class="section-subtitle">開発の背景</h3>
-        <p>
-          本プロジェクトは、Amazonが掲げる「顧客中心主義」の理念を背景に、学校生活における"日常の不便"を技術で解決することを目的として始まりました。<br>
-          実際に校内でアンケートを行い、「昼食時に座る場所が見つからない」「自習室の空き状況がわかりにくい」といった声を多数いただいたことから、<br>
-          課題の本質は「混雑状況をリアルタイムで把握できないこと」にあると分析しました。
-        </p>
+        <div class="expandable-container">
+          <div class="expandable-content expanded" id="expand-1">
+            <p>
+              本プロジェクトは、Amazonが掲げる「顧客中心主義」の理念を背景に、学校生活における"日常の不便"を技術で解決することを目的として始まりました。<br>
+              実際に校内でアンケートを行い、「昼食時に座る場所が見つからない」「自習室の空き状況がわかりにくい」といった声を多数いただいたことから、<br>
+              課題の本質は「混雑状況をリアルタイムで把握できないこと」にあると分析しました。
+            </p>
+          </div>
+          <button class="expand-toggle" data-target="expand-1">もっと見る</button>
+        </div>
 
         <h3 class="section-subtitle">機能と効果</h3>
-        <p>
-私はバックエンド開発を担当し、AWSのAIサービスを活用して空席情報を自動で可視化する仕組みを実装しました。<br>
-教室やフリースペースに設置したカメラ映像を1分ごとにクラウド上へ送信し、AWS上のAIモデルで画像を解析。<br>
-検出された人数データをデータベースに保存し、Web上の座席マップにリアルタイムで反映させることで、利用者が一目で空席状況を確認できるようにしました。<br><br>
-</p>
-<img src="image/image_aws.jpg" alt="AWS">
-<p>
-従来、利用者は空いている場所を探すために校内を歩き回る必要がありましたが、「見える化くん」の導入により、数秒で空席を把握できるようになり、<br>
-時間の節約と混雑緩和の両立を実現しました。<br>
-さらに、将来的にはAWSの「SageMaker」を活用して混雑度をAI予測するなど、拡張性の高い設計を意識しました。<br><br>
-</p>        
+        <div class="expandable-container">
+          <div class="expandable-content" id="expand-2">
+            <p>
+              私はバックエンド開発を担当し、AWSのAIサービスを活用して空席情報を自動で可視化する仕組みを実装しました。<br>
+              教室やフリースペースに設置したカメラ映像を1分ごとにクラウド上へ送信し、AWS上のAIモデルで画像を解析。<br>
+              検出された人数データをデータベースに保存し、Web上の座席マップにリアルタイムで反映させることで、利用者が一目で空席状況を確認できるようにしました。
+            </p>
+            <img src="image/image_aws.jpg" alt="AWS" class="expandable-img">
+            <p>
+              従来、利用者は空いている場所を探すために校内を歩き回る必要がありましたが、「見える化くん」の導入により、数秒で空席を把握できるようになり、<br>
+              時間の節約と混雑緩和の両立を実現しました。<br>
+              さらに、将来的にはAWSの「SageMaker」を活用して混雑度をAI予測するなど、拡張性の高い設計を意識しました。
+            </p>
+          </div>
+          <button class="expand-toggle" data-target="expand-2">もっと見る</button>
+        </div>        
 <h3 class="section-subtitle">成果と学び</h3>
-<p>
-このプロジェクトは東京のAmazon Japan本社で発表し、徹底した顧客目線とAWSの有効活用が評価され、「AWS Customer Obsession 賞」を受賞しました。<br><br>
-
-技術が人の生活を支える力を持つことを実感し、
-これからも利用者に寄り添う開発を大切にしていきたいと感じました。
-</p>
+<div class="expandable-container">
+  <div class="expandable-content" id="expand-3">
+    <p>
+      このプロジェクトは東京のAmazon Japan本社で発表し、徹底した顧客目線とAWSの有効活用が評価され、「AWS Customer Obsession 賞」を受賞しました。<br>
+      <br>
+      技術が人の生活を支える力を持つことを実感し、これからも利用者に寄り添う開発を大切にしていきたいと感じました。
+    </p>
+  </div>
+  <button class="expand-toggle" data-target="expand-3">もっと見る</button>
+</div>
       <h3 class="section-subtitle">IntelAIPC<br>
         プロモーション企画</h3>
       <p>プロモーション動画を作成しSNSなどを通じて宣伝。<br>
@@ -162,19 +183,23 @@
       <div class="git"><h2 class="section-subtitle"></h2></div>
       <div class="output centered-output">
         <div class="element">
-        <h3 class="section-subtitle">(Java/Spring Boot)</h3>
-        <img src="" alt="Javaプロジェクト1">
-        <p></p>
+        <h3 class="section-subtitle">簡易マッチングアプリ</h3>
+        <p>
+          Java（Spring Boot）を使用してWebアプリケーションを開発。<br>
+Spring Security による新規登録・ログイン機能を実装。<br>
+Thymeleaf を用いてデータの表示処理を最適化。<br>
+マッチングアプリを簡略化したシステムとして、ユーザーが条件検索を行うことで登録者の一覧を表示できる機能を実現。
+        </p>
+        
       </div></div>
-      <div class="git"><a href="" target="_blank">GitHubで見る</a></div>
+      <div class="git"><a href="https://github.com/narifuu36/Java.git" target="_blank">GitHubで見る</a></div>
 
       <div class="output centered-output">
         <div class="element">
-        <h3 class="section-subtitle">カレンダー共有アプリ(Python/Flask/SQLite)</h3>
-        <img src="" alt="Python">
+        <h3 class="section-subtitle">カレンダー共有アプリ</h3>
         <p>Flaskを活用して、ユーザー同士で予定を共有できるカレンダーアプリを制作。<br>
 ユーザー登録・ログイン機能を実装し、誰が予定を登録したかを可視化。<br>
-同じパスを持つユーザー間でカレンダーを共有できるようにしました。<br>
+同じパスを持つユーザー間でカレンダーを共有できます。<br>
 友人の意見をもとに改良を重ね、より使いやすく、作る楽しさを実感できた作品です。</p>
 
       </div>
@@ -199,13 +224,18 @@
       </div></div>
       <div class="git"><a href="https://github.com/narifuu36/HTML.git" target="_blank">GitHubで見る</a></div>
 
-      <p>
-        SQL<br>
+      
+        <h2 class="section-title">SQL</h2> 
+        <p>
+        <br>
         ・データ検索,追加,更新,削除
         ・テーブル作成,削除,主キー設定
         JavaのSpring Bootと使用し、WEBサイトでのユーザー情報の新規登録、ログイン機能を作成。登録した情報を検索でき、ユーザーの求める条件で表示する機能を実現。
+        <br></p>
+        <h2 class="section-title">Linux</h2>
+        
+        <p>
         <br>
-        Linux<br>
         ・1年間の授業で基礎知識の学習。基礎的なコマンドを学習。
       </p>
 
@@ -245,6 +275,39 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
     $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
     $(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
 });
+</script>
+
+<!-- 展開可能テキスト用JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // すべての展開トグルボタンに対してイベントリスナーを設定
+    const toggleButtons = document.querySelectorAll('.expand-toggle');
+    
+    toggleButtons.forEach(button => {
+      const targetId = button.getAttribute('data-target');
+      const content = document.getElementById(targetId);
+      
+      // 初期状態：展開されているかチェック
+      if (content && !content.classList.contains('expanded')) {
+        button.classList.add('collapsed');
+        button.textContent = 'もっと見る';
+      } else if (content && content.classList.contains('expanded')) {
+        button.classList.remove('collapsed');
+        button.classList.add('expanded');
+        button.textContent = '隠す';
+      }
+      
+      // クリックイベント
+      button.addEventListener('click', function () {
+        if (content) {
+          content.classList.toggle('expanded');
+          button.classList.toggle('collapsed');
+          button.classList.toggle('expanded');
+          button.textContent = content.classList.contains('expanded') ? '隠す' : 'もっと見る';
+        }
+      });
+    });
+  });
 </script>
 </body>
 </html>
