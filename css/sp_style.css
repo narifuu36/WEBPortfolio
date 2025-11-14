@@ -154,18 +154,58 @@
     padding-right: 0.25rem;
   }
   .skills-section .output {
-    padding: 0.75rem 1rem; /* 左右の余白を確保 */
-    justify-content: flex-start; /* 先頭を左寄せにする */
-    scroll-snap-type: x mandatory; /* スクロールスナップで切れを防ぐ */
+    padding: 0.75rem 1rem; 
+    justify-content: flex-start; 
+    scroll-snap-type: x mandatory; 
     -webkit-overflow-scrolling: touch;
   }
   .skills-section .output .element {
-    scroll-snap-align: start; /* 要素の開始位置でスナップ */
-    margin-right: 0.5rem; /* カード間の隙間 */
+    scroll-snap-align: start; 
+    margin-right: 0.5rem; 
   }
   
-  /* Java と Python は常に中央揃え */
+  
   .skills-section .output.centered-output {
-    justify-content: center; /* モバイルでも中央揃え */
+    justify-content: center; 
+  }
+
+  
+  .introduction-section p,
+  .career-section p,
+  .values-section p,
+  .project-section p,
+  .skills-section p,
+  .contact-section p {
+    margin: 18px 1rem; 
+    line-height: 1.9; 
+    box-sizing: border-box;
+  }
+
+  
+  .box.padded {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  
+  .pc {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .pc h3,
+  .pc figure,
+  .pc p {
+    width: 100%;
+  }
+  
+  .pc figure img {
+    display: block;
+    width: auto;
+    max-width: 200px; 
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
   }
 }

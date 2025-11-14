@@ -66,11 +66,20 @@ nav a:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -1;
+  z-index: -2;
 }
 .background-video video {
   min-width: 100%;
   min-height: 100%;
+}
+/* 全ページ背景用オーバーレイ（背景動画や背景色・背景画像全てに適用） */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.28); /* 暗さの調整はここで */
+  z-index: -1; /* 背景より前、メインコンテンツより後ろ */
+  pointer-events: none;
 }
 
 /* 汎用ボックス */
@@ -95,7 +104,7 @@ nav a:hover {
   font-weight: bold;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
 }
 .section-subtitle {
   display: flex;
@@ -180,11 +189,13 @@ nav a:hover {
 }
 
 .output::-webkit-scrollbar {
-  height: 8px;
+  height: 14px;
+  width: 14px;
 }
 .output::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.12);
-  border-radius: 4px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 7px;
+  border: 2px solid rgba(0,0,0,0.08);
 }
 
 .output .element {
@@ -231,11 +242,20 @@ nav a:hover {
 
 /* スクロールバー見た目 */
 .skills-section .output::-webkit-scrollbar {
-  height: 8px;
+  height: 14px;
+  width: 14px;
 }
 .skills-section .output::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.12);
-  border-radius: 4px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 7px;
+  border: 2px solid rgba(0,0,0,0.08);
+}
+
+/* Firefox: 指定できるのは幅のプリセットのみ。auto で通常幅に、thin で細め */
+.output,
+.skills-section .output {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(255,255,255,0.18) transparent;
 }
 
 /* 各カード（要素） */
@@ -274,4 +294,83 @@ footer {
 }
 footer small {
   display: block;
+}
+
+/* GitHub リンクをボタン風にする */
+.git a {
+  display: inline-block;
+  background: #93badf;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: background .15s ease, transform .05s ease;
+}
+.git a:hover {
+  background: #93badf;
+}
+.git a:active {
+  transform: translateY(1px);
+}
+.git a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.9em;
+  margin-left: 0.25rem;
+}
+/* .git コンテナを中央揃えにする */
+.git {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* 展開可能なテキストセクション */
+.expandable-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.expandable-content.expanded {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.expandable-img {
+  margin: 1rem 0;
+}
+
+.expand-toggle {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  margin-top: 0.5rem;
+}
+
+.expand-toggle:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.expand-toggle.collapsed::before {
+  content: "▼ ";
+}
+
+.expand-toggle.expanded::before {
+  content: "▲ ";
 }
